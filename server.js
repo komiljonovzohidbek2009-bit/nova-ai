@@ -52,7 +52,11 @@ app.use((req,res,next)=>{
   next();
 });
 
-app.get("/config.js", (_req,res)=>res.type("application/javascript").sendFile("config.js",{root:"."}));
+app.get("/config.js", (_req,res)=>res.type("application/javascript").sendFile("config.js",{root:"."}));app.get("/googleda32ff21b7fcb5ac.html", (req, res) => {
+  res.type("text/plain").send(
+    "google-site-verification: googleda32ff21b7fcb5ac.html"
+  );
+});
 app.get("/robots.txt", (_req,res)=>res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${publicUrl}/sitemap.xml\n`));
 app.get("/sitemap.xml", (_req,res)=>res.type("application/xml").send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${publicUrl}/</loc></url>\n</urlset>`));
 app.get("/", (_req,res)=>{
